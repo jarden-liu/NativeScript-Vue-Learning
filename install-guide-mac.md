@@ -47,7 +47,7 @@
 ``` 
 
 ### Android SDK
-1. [JDK 8+](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+1. [JDK 8+](http://www.oracle.com/technetwork/java/javase/downloads/index.html)，好像暂时不支持9
 2. android-sdk
 ```bash 
     $ brew cask install android-sdk
