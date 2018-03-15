@@ -6,7 +6,7 @@
 
 - [NativeScript-Vue Mac OS安装篇](#nativescript-vue-mac-os安装篇)
     - [环境需求](#环境需求)
-        - [Brew](#brew)
+        - [Brew](#brew)
         - [Node.js](#nodejs)
         - [NativeScript CLI](#nativescript-cli)
         - [Xcode](#xcode)
@@ -17,7 +17,7 @@
 <!-- /TOC -->
 
 
-### Brew
+### Brew
 > macOS 缺失的软件包管理器，用于快速安装软件包
 ```bash
    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -52,7 +52,7 @@
 ```bash 
     $ brew cask install android-sdk
 ```
-3. 环境变量
+3. 环境变量
 * 在`~/.bash_profile`添加
 ```bash 
     export JAVA_HOME=$(/usr/libexec/java_home)
