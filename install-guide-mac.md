@@ -48,7 +48,7 @@
 ``` 
 
 ### Android SDK
-1. [JDK 8+](http://www.oracle.com/technetwork/java/javase/downloads/index.html)，暂时不支持9(2018-03-16)
+1. [JDK 8+](http://www.oracle.com/technetwork/java/javase/downloads/index.html)，暂时不支持9(2018-03-16)
 2. android-sdk
 ```bash 
     $ brew cask install android-sdk
@@ -63,7 +63,7 @@
 ```bash 
    $  $ANDROID_HOME/tools/bin/sdkmanager "tools" "platform-tools" "platforms;android-25" "build-tools;25.0.2" "extras;android;m2repository" "extras;google;m2repository"
 ```
-    ps: 这一步会卡很久，因为在下载。也可能完全卡主，自卑
+    ps: 这一步会卡很久，因为在下载。也可能完全卡主，自卑
 
 
 ### android模拟器
