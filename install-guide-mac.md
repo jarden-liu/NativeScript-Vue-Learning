@@ -93,7 +93,7 @@
 
 
 ### 填坑小能手
-* 误装了Java 9，删除java9 
+* 误装了Java 9，删除java9 
 ```bash
     $ sudo rm -rf /Library/Java/JavaVirtualMachines/
     $ cd /Library/Java/
@@ -105,8 +105,8 @@
 ```
    重启，安装java 8就ojbk了
 
-* ` npm run watch:android`的时候, 下载`gradle-4.1-all.zip`卡住。
+* `npm run watch:android`的时候, 下载`gradle-4.1-all.zip`卡住。
  1. 手动下载`gradle-4.1-all.zip`.
- 2. 放到`~/.gradle/wrapper/dists/gradle-4.1-all/bzyivzo6n839fup2jbap0tjew/`路径下。；路径会有所差异，根据自身文件路径放入，重新 ` npm run watch:android`。
+ 2. 放到`~/.gradle/wrapper/dists/gradle-4.1-all/bzyivzo6n839fup2jbap0tjew/`路径下。；路径会有所差异，根据自身文件路径放入，重新 ` npm run watch:android`。
 
 
