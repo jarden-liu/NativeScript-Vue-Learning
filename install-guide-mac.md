@@ -13,6 +13,7 @@
         - [Android SDK](#android-sdk)
         - [android模拟器](#android模拟器)
         - [快速开始](#快速开始)
+        - [填坑小能手](#填坑小能手)
 
 <!-- /TOC -->
 
@@ -36,7 +37,7 @@
 ```
 
 ### Xcode
-1. 下载安装XCode，前往[苹果开发者中心](https://developer.apple.com/download/)下载
+1. 下载安装XCode，前往[苹果开发者中心](https://developer.apple.com/download/)下载，5G多嘿嘿嘿
 2. 安装xcodeproj
 ```bash
     $ sudo gem install xcodeproj
@@ -47,7 +48,7 @@
 ``` 
 
 ### Android SDK
-1. [JDK 8+](http://www.oracle.com/technetwork/java/javase/downloads/index.html)，好像暂时不支持9
+1. [JDK 8+](http://www.oracle.com/technetwork/java/javase/downloads/index.html)，暂时不支持9(2018-03-16)
 2. android-sdk
 ```bash 
     $ brew cask install android-sdk
@@ -57,13 +58,12 @@
 ```bash 
     export JAVA_HOME=$(/usr/libexec/java_home)
     export ANDROID_HOME=/usr/local/share/android-sdk
-    export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 ```
 4. 安装Android SDK Platform 25 和 Build-Tools 25.0.2 +
 ```bash 
    $  $ANDROID_HOME/tools/bin/sdkmanager "tools" "platform-tools" "platforms;android-25" "build-tools;25.0.2" "extras;android;m2repository" "extras;google;m2repository"
 ```
-    ps: 这一步会卡很久，因为在下载
+    ps: 这一步会卡很久，因为在下载。也可能完全卡主，自卑
 
 
 ### android模拟器
@@ -87,6 +87,26 @@
 
 * 运行App
 ```bash 
- $ npm run watch: <platform>
+ $ npm runwatch:<platform>
 ```
 这里的platform可选`ios`和 `android`
+
+
+### 填坑小能手
+* 误装了Java 9，删除java9 
+```bash
+    $ sudo rm -rf /Library/Java/JavaVirtualMachines/
+    $ cd /Library/Java/
+    $ sudo mkdir JavaVirtualMachines
+    $ sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
+    $ sudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefPane
+    $ sudo rm -fr ~/Library/Application\ Support/Java
+
+```
+   重启，安装java 8就ojbk了
+
+* ` npm run watch:android`的时候, 下载`gradle-4.1-all.zip`卡住。
+ 1. 手动下载`gradle-4.1-all.zip`.
+ 2. 放到`~/.gradle/wrapper/dists/gradle-4.1-all/bzyivzo6n839fup2jbap0tjew/`路径下。；路径会有所差异，根据自身文件路径放入，重新 ` npm run watch:android`。
+
+
